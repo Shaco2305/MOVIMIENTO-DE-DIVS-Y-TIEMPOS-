@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Animacion 3 CSS</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .contenedor{
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            position: relative; /* para centar el div*/
+            margin: 0 auto;  /*para centrar el div*/
+            overflow: hidden;/*muestra solo lo interior, lo de adentro como le gusta a niels*/
+        }
+        .cuadrito{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;/*permite mover el div dentro del contenedor. siempre se usa absolute 
+            cuando es el hijo*/
+            top: 50px;
+            left: 150px;
+
+            animation: cuadrito 3s infinite linear;
+        }
+        @keyframes cuadrito{
+                from{
+                    left: -150px;
+                }
+                to{
+                    left:  400px;
+                }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="contenedor">
+
+            <div class="cuadrito"></div>
+
+    </div>
+
+</body>
+
+</html>
